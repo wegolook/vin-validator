@@ -1,0 +1,33 @@
+{
+  "name": "vin",
+  "version": "0.0.1",
+  "description": "VIN validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WeGoLook/vin.git"
+  },
+  "keywords": [
+    "vin",
+    "validator"
+  ],
+  "author": "WeGoLook, LLC <dev@wegolook.com>",
+  "contributors": [
+    {
+      "name": "Nicholas Lindley",
+      "email": "nick.lindley@wegolook.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeGoLook/vin/issues"
+  },
+  "homepage": "https://github.com/WeGoLook/vin",
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
+}
