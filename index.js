@@ -1,6 +1,6 @@
 function validate(vin) {
   vin = vin.toLowerCase();
-  if (!/^[abcdefghjklmnprstuvwxyz0123456789]{17}$/.test(vin)) {
+  if (!/^[a-hj-npr-z0-9]{8}[0-9xX][a-hj-npr-z0-9]{8}$/.test(vin)) {
     return false;
   }
 
@@ -44,11 +44,11 @@ function validate(vin) {
   var sum = 0;
 
   for (var i = 0; i < vin.length; ++i) {
-    sum += transliterationTable[vin[i]] * weightsTable[i];
+    sum += transliterationTable[vin.charAt(i)] * weightsTable[i];
   }
 
   var mod = sum % 11;
-  return mod === 10 ? vin[8] === 'x' : vin[8] == mod;
+  return mod === 10 ? vin.charAt(8) === 'x' : vin.charAt(8) == mod;
 }
 
 module.exports = {
