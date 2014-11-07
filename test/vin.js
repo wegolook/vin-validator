@@ -1,12 +1,12 @@
 var expect = require('chai').expect;
-var VIN = require('../');
+var vinValidator = require('../');
 
 describe('Given a 16 digit VIN', function() {
   var vin = 'WVWUK63B92P54681';
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -19,7 +19,7 @@ describe('Given a 18 digit VIN', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -32,7 +32,7 @@ describe('Given a 17 digit VIN with an i', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -45,7 +45,7 @@ describe('Given a 17 digit VIN with an I', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -58,7 +58,7 @@ describe('Given a 17 digit VIN with an o', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -71,7 +71,7 @@ describe('Given a 17 digit VIN with an O', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -84,7 +84,7 @@ describe('Given a 17 digit VIN with an q', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -97,7 +97,7 @@ describe('Given a 17 digit VIN with an Q', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -110,7 +110,7 @@ describe('Given a valid VIN with lowercase letters', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should pass', function() {
       expect(valid).to.be.true;
@@ -123,7 +123,7 @@ describe('Given a VIN with an incorrect check digit', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should fail', function() {
       expect(valid).to.be.false;
@@ -136,7 +136,7 @@ describe('Given a VIN with a correct check digit', function() {
 
   describe('When the VIN is validated', function() {
     var valid;
-    beforeEach(function() { valid = VIN.validate(vin); })
+    beforeEach(function() { valid = vinValidator.validate(vin); })
 
     it('Then it should pass', function() {
       expect(valid).to.be.true;
