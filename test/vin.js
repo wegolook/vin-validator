@@ -143,3 +143,27 @@ describe('Given a VIN with a correct check digit', function() {
     });
   });
 });
+
+describe('Given null value', function() {
+  var vin = null;
+
+  describe('When the VIN is validated', function() {
+    var valid;
+    beforeEach(function() { valid = vinValidator.validate(vin); })
+
+    it('Then it should fail', function() {
+      expect(valid).to.be.false;
+    });
+  });
+});
+
+describe('Given undefined', function() {
+  describe('When the VIN is validated', function() {
+    var valid;
+    beforeEach(function() { valid = vinValidator.validate(); })
+
+    it('Then it should fail', function() {
+      expect(valid).to.be.false;
+    });
+  });
+});

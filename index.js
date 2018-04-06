@@ -1,4 +1,8 @@
 function validate(vin) {
+  if (!vin) {
+    return false;
+  }
+
   vin = vin.toLowerCase();
   if (!/^[a-hj-npr-z0-9]{8}[0-9xX][a-hj-npr-z0-9]{8}$/.test(vin)) {
     return false;
